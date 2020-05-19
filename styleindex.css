@@ -5,11 +5,30 @@ html, body {
     margin: 0;
     box-sizing: border-box;
 }
-:root {
-    --blue-main: #114F8D;
-}
+
 ul, li {
     list-style: none;
     padding: 0;
+}
+
+/*Section Main-Title*/
+.main-title {
+    background-image: linear-gradient(#76FFDE, #ABFF69);
+    padding: 8rem 0px 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-title h1,p {
+    font-family: 'Sedgwick Ave Display', cursive;;
+}
+.main-title h1 {
+    font-size: 40px;
+}
+.main-title p {
+    margin-top: -1rem;
+    font-size: 20px;
 }
 
