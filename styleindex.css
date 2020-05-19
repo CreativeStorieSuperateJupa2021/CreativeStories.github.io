@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --blue-main: #114F8D;
+}
+ul, li {
+    list-style: none;
+    padding: 0;
+}
+
