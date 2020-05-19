@@ -32,3 +32,21 @@ ul, li {
     font-size: 20px;
 }
 
+/*William Phrases*/
+.phrases {
+    height: 80px;    
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.phrases .ws-phrases {
+    background-image: url('imgs/wshakespearephrases.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.phrases .ws-middle {
+    background-image: url('imgs/wsphrasesmiddle.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
