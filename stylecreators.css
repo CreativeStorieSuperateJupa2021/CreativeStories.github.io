@@ -7,6 +7,11 @@ header {
     position: absolute;
     z-index: 1000;
 }
+/*User position*/
+header .nav-menu-small ul li:nth-last-child(1){
+    background-color:var(--blue-light);
+}
+
 /*Cubes ANIMATION*/
 .wrapper {
     position: absolute;
