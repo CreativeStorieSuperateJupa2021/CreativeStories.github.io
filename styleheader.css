@@ -2,64 +2,128 @@
 
 :root {
     --blue-main: #114F8D;
+    --blue-light: #0D78BD;
+    --same-heigth: 25px;
+    /* background-image: linear-gradient( #76FFDE, #ABFF69); */
 }
-
+a {
+    text-decoration: none;
+}
+body {
+    height: 200vh;
+}
 /*Header*/
-header {
-    background-color: var(--blue-main);
+header .nav-menu {
+    display: none;
+}
+nav ul {
+    display: flex;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     width: 100%;
-    height: 60px;
     position: fixed;
 }
 
+/*LOGOS*/
 header .logocontainer {
     display: flex;
     height: inherit;
-    align-items: center;
     justify-content: space-between;
-    /* border: 1px solid black; */
 }
-
 .logocontainer .cs-logo {
-    display: flex;
     background-image: linear-gradient( #76FFDE, #ABFF69);
     font-family: 'Sedgwick Ave Display', cursive;
-    font-size: 20px;
     text-align: center;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    font-size: 30px;
 }
 .logocontainer .superatelogo {
     background-image: url('imgs/superatelogo.png');
-}
 
-/* logo */
+}
 .logo {
     background-position: center;
     background-size: cover;
-    height: inherit;
-    width: 90px;
-    padding: 0 10px;
+    padding: 0 35px;
 }
-
-/*NAV*/
-.nav-menu {
-    margin-top: -16px;
-    transition: all .3s ease-in;
+header .nav-menu-small {
+    position: fixed;
+    background-color: var(--blue-main);
+    width: 100%;
 }
-.nav-menu ul {
+/*Nav-Menu - Small*/
+header .nav-menu-small ul {
+    background-color: inherit;
+    top: 36px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
-}
-.nav-menu ul li{ 
-    /* height: inherit; */
-    background-color: var(--blue-main);
     text-align: center;
-    padding: 10px;
 }
-.nav-menu ul li a {
+header .nav-menu-small ul li {
+    padding: 10px 0;
+    transition: all .2s ease-out;
+}
+header .nav-menu-small ul li:hover {
+    background-color: var(--blue-light);
+}
+header .nav-menu-small ul a {
     color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    /*HEADER - Menu BigScreens*/
+    header .nav-menu {
+        display: block;
+    }
+    header .nav-menu-small {
+        display: none;
+    }
+    header .nav-menu ul {
+        justify-content: flex-end;
+        align-items: center;
+        background-color: aqua;
+    }
+
+    header li {
+        background-color: aliceblue;
+    }
+    header li a {
+        display: block;
+        padding: var(--same-heigth);
+        transition: all .2s ease-in-out;
+    }
+    header li a:hover {
+        background-color: var(--blue-light);
+    }
+    /*LOGOS*/
+    header .logocontainer {
+        position: absolute;
+        height: inherit;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    .logocontainer .cs-logo {
+        background-image: linear-gradient( #76FFDE, #ABFF69);
+        font-family: 'Sedgwick Ave Display', cursive;
+        text-align: center;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        font-size: 30px;
+    }
+    .logocontainer .superatelogo {
+        background-image: url('imgs/superatelogo.png');
+    }
+    .logo {
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        padding: 0 20px;
+    }
+
 }
