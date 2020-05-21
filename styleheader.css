@@ -9,10 +9,11 @@
 a {
     text-decoration: none;
 }
-body {
-    height: 200vh;
-}
+
 /*Header*/
+header {
+    z-index: 1000;
+}
 header .nav-menu {
     display: none;
 }
