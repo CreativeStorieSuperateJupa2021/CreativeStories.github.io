@@ -8,7 +8,7 @@ header {
     z-index: 1000;
 }
 /*User position*/
-header .nav-menu-small ul li:nth-child(2){
+header .nav-menu-small ul li:nth-child(2), .nav-menu ul li:nth-child(3){
     background-color:var(--blue-light);
 }
 
