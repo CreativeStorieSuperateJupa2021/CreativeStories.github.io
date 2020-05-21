@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sedgwick+Ave+Display&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
 html, body {
     padding: 0;
     margin: 0;
@@ -10,11 +10,21 @@ ul, li {
     list-style: none;
     padding: 0;
 }
+:root {
+    --blue-main: #114F8D;
+    --blue-light: #0D78BD;
+}
+
+/*User position*/
+header .nav-menu-small ul li:nth-child(1){
+    background-color:var(--blue-light);
+}
+
 
 /*Section Main-Title*/
 .main-title {
     background-image: linear-gradient(#76FFDE, #ABFF69);
-    padding: 8rem 0px 2rem;
+    padding: 6rem 0px 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,11 +35,11 @@ ul, li {
     font-family: 'Sedgwick Ave Display', cursive;;
 }
 .main-title h1 {
-    font-size: 40px;
+    font-size: 45px;
 }
 .main-title p {
     margin-top: -1rem;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /*William Phrases*/
@@ -49,4 +59,10 @@ ul, li {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/*Stories-Section*/
+.stories h2 {
+    text-align: center;
+    background-color: red;
 }
