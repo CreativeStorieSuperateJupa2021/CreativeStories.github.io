@@ -66,3 +66,14 @@ header .nav-menu-small ul li:nth-child(1), .nav-menu ul li:nth-child(2){
     text-align: center;
     background-color: red;
 }
+
+.stories .widget-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 500px));
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+.widget-container .story-widget {
+    border: 2px solid black;
+}
