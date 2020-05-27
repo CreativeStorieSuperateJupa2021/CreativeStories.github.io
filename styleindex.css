@@ -69,11 +69,35 @@ header .nav-menu-small ul li:nth-child(1), .nav-menu ul li:nth-child(2){
 
 .stories .widget-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 500px));
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
+    justify-content: space-evenly;
     align-content: center;
-    gap: 20px;
+    gap: 120px 20px;
+    padding: 50px 0;
 }
+/*articles style*/
+.widget-container article {
+    background-color: var(--blue-main);
+    height: 180px;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    border-radius: 10px;
+}
+/*just to see the divs*/
+.widget-container article div {
+    border: 1px dashed brown;
+}
+/**/
+/*Story-Widget*/
 .widget-container .story-widget {
-    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    height: inherit;
+    position: relative;
+}
+.story-widget div {
+    background-color: #fff;
+    position: relative;
+    bottom: 30%;
+    width: 70%;
 }
