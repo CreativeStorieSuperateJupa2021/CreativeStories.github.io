@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 /* font-family: 'Open Sans', sans-serif; */
 html, body {
     padding: 0;
@@ -13,6 +14,10 @@ ul, li {
 :root {
     --blue-main: #114F8D;
     --blue-light: #0D78BD;
+}
+h1::selection, p::selection {
+    color: var(--blue-light);
+    background-color: #ABFF69;
 }
 
 /*User position*/
@@ -31,7 +36,7 @@ header .nav-menu-small ul li:nth-child(1), .nav-menu ul li:nth-child(2){
     flex-direction: column;
 }
 
-.main-title h1,p {
+.main-title h1, .main-title p {
     font-family: 'Sedgwick Ave Display', cursive;;
 }
 .main-title h1 {
@@ -62,18 +67,69 @@ header .nav-menu-small ul li:nth-child(1), .nav-menu ul li:nth-child(2){
 }
 
 /*Stories-Section*/
-.stories h2 {
-    text-align: center;
-    background-color: red;
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(171px, 1fr));
+    margin-top: 3rem;
+    padding: 40px 10px;
+    gap: 4rem 20px;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
 }
 
-.stories .widget-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 500px));
-    justify-content: center;
-    align-content: center;
-    gap: 20px;
+.stories-grid .story-card {
+    display: flex;
+    position: relative;
+    -webkit-box-align: end;
+          align-items: flex-end;
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 15px rgba(170, 170, 170, 0.46);
+        box-shadow: 10px 10px 15px rgba(170, 170, 170, 0.46);
+    min-height: 60%;
+    margin-top: 70px;
+    -webkit-transition: .3s ease all;
+        transition: .3s ease all;
 }
-.widget-container .story-widget {
-    border: 2px solid black;
+
+
+.stories-grid .story-card img {
+    vertical-align: top;
+    border-radius: 10px;
+    position: absolute;
+    top: -100px;
+    width: calc(100% - 40px);
+    max-height: 12em;
+    object-fit: cover;
+}
+
+/* Cards-Info */
+.stories-grid .story-card .story-info {
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 20% 80%;
+    margin-top: 20px;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+}
+.story-card .story-info .author-photo {
+    border-radius: 100%;
+    border: 1px solid #7f7f7f;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url('imgs/svgs_icons/user-solid.svg');
+    background-position: center;
+}
+.story-card .story-info .author-info {
+    line-height: 5px;
+}
+.author-info p:nth-child(1) {
+    line-height: 20px;
+}
+.author-info p:nth-last-child(1) {
+    font-size: 12px;
+    font-weight: 200;
 }
